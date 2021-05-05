@@ -67,13 +67,24 @@
 
     </body>
     <script>
-        window.addEventListener('keydown', function(event){
-            const audio= document.querySelector(`audio[data-key="${event.keyCode}"]`)
-            if (!audio) return; // hace que no se reproduzcan todos juntos
-            audio.currentTime=0; // podes empezara el audio devuelta y no hace falta que termine
-            audio.play()        //funcion para reproducir el audio
-            key.classList.add('playing');
-        })
+        function removeTransition(e) {
+    if (e.propertyName !== 'transform') return;
+    e.target.classList.remove('playing');//remueve el playing.
+  }
+
+  function playSound(e) {
+    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`); //var de la key audio segun tecla
+    const key = document.querySelector(`div[data-key="${e.keyCode}"]`); //var de la key de tecl)
+    if (!audio) return; //si apretas una tecla que no tenga la misma key que audio. 
+
+    key.classList.add('playing');//asignar a la key una clase playing (en css esta el estilo. Cuando es apretada)
+    audio.currentTime = 0; //no se reproduzcan juntos
+    audio.play();
+  }
+
+  const keys = Array.from(document.querySelectorAll('.key'));
+  keys.forEach(key => key.addEventListener('transitionend', removeTransition));//a cada tecla -> transitioned, remove
+  window.addEventListener('keydown', playSound);
     </script>
 
 
