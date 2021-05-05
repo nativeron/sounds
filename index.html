@@ -1,0 +1,81 @@
+<!DOCTYPE HTML>
+<htmL>
+    <head>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+            </style>
+        <title>sounds</title>
+        <link rel="stylesheet" href="./style.css"/>
+        <link rel="shortcut icon" href="https://image.flaticon.com/icons/png/128/725/725019.png">
+    </head>
+    <body>
+    </br>
+        <div><img src="https://i.pinimg.com/originals/07/fe/d8/07fed84592f18082c10c79ffca49b359.gif"/></div>
+        <h2>Press the keys</h2>
+        <div class="keys">
+            <div data-key="65" class="key"> <!-- keycode.info -->
+                <kbd>A</kbd>
+                <span class="sound"></span>
+            </div>
+          
+            <div data-key="83" class="key">
+                <kbd>S</kbd>
+        
+                <span class="sound"></span>
+            </div> 
+            <div data-key="68" class="key">
+                <kbd>D</kbd>
+                <span class="sound"></span>
+            </div> 
+            <div data-key="70" class="key">
+                <kbd>F</kbd>
+                <span class="sound"></span>
+            </div> 
+            <div data-key="71" class="key">
+                <kbd>G</kbd>
+                <span class="sound"></span>
+            </div> 
+       
+            <div data-key="72" class="key">
+                <kbd>H</kbd>
+                <span class="sound"></span>
+            </div> 
+            <div data-key="74" class="key">
+                <kbd>J</kbd>
+                <span class="sound"></span>
+            </div> 
+            <div data-key="75" class="key">
+                <kbd>K</kbd>
+                <span class="sound"></span>
+            </div>               
+            <div data-key="76" class="key">
+                <kbd>L</kbd>
+                <span class="sound"></span>
+            </div> 
+
+        </div>
+
+        <audio data-key="65" src="./audio/dropped-spinner-427.ogg"></audio>
+        <audio data-key="74" src="./audio/martian-gun-436.ogg"></audio>
+        <audio data-key="83" src="./audio/oh-boy-499.ogg"></audio>
+        <audio data-key="68" src="./audio/smack-that-bitch-452.ogg"></audio>
+        <audio data-key="70" src="./audio/springy-incident-381.ogg"></audio>
+        <audio data-key="71" src="./audio/surprise-on-a-spring-496.ogg"></audio>
+        <audio data-key="72" src="./audio/thrown-away-123.ogg"></audio>
+        <audio data-key="75" src="./audio/wee-tziu-321.ogg"></audio>
+        <audio data-key="76" src="./audio/youre-a-coward-395.ogg"></audio>
+
+    </body>
+    <script>
+        window.addEventListener('keydown', function(event){
+            const audio= document.querySelector(`audio[data-key="${event.keyCode}"]`)
+            if (!audio) return; // hace que no se reproduzcan todos juntos
+            audio.currentTime=0; // podes empezara el audio devuelta y no hace falta que termine
+            audio.play()        //funcion para reproducir el audio
+            key.classList.add('playing');
+        })
+    </script>
+
+
+
+</htmL>

@@ -1,0 +1,58 @@
+body{
+    background-color:white;
+    background-image: url(https://wallpaperaccess.com/full/2923100.jpg);
+    background-size: 100%;
+    
+}
+body,html {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  img{
+      width: 110px;
+  }
+  .keys {
+    display: flex;
+    
+    min-height: fit-content;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .key {
+    border: 3px solid #341c54;
+    border-radius: 5px;
+    margin: 1rem;
+    font-size: 50px;
+    padding: 1rem .5rem;
+    transition: all 1.07s;
+    width: 50%;
+    text-align: center;
+    color: #f16fc1;
+    background:#4cb1ed;
+    text-shadow: 0 0 .5rem white;
+  }
+  
+  
+  kbd {
+    display: block;
+    font-size: 40px;
+    
+    font-family: 'Press Start 2P', cursive;
+  }
+  h2{
+    font-family: 'Press Start 2P', cursive;
+  }
+  .sound {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: .1rem;
+    color: #ffc600;
+  }
+
+  .playing{
+      transform: scale(2);
+      border-color: yellow;
+      box-shadow: 0 0 10px yellow;
+  }
