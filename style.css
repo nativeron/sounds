@@ -1,6 +1,6 @@
 body{
     background-color:white;
-    background-image: url(https://wallpaperaccess.com/full/2923100.jpg);
+    background-image: url(./250502.jpg);
     background-size: 100%;
     
 }
@@ -30,8 +30,7 @@ body,html {
     width: 50%;
     text-align: center;
     color: #f16fc1;
-    background:#4cb1ed;
-    text-shadow: 0 0 .5rem white;
+    background:black;
   }
   
   
@@ -43,6 +42,7 @@ body,html {
   }
   h2{
     font-family: 'Press Start 2P', cursive;
+    color:white
   }
   .sound {
     font-size: 1.2rem;
@@ -52,7 +52,7 @@ body,html {
   }
 
   .playing{
-      transform: scale(2);
+      transform: scale(0.7);
       border-color: yellow;
-      box-shadow: 0 0 10px yellow;
+      box-shadow: 0 0 7px yellow;
   }
